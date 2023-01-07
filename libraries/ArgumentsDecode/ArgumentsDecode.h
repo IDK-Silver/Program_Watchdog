@@ -1,0 +1,14 @@
+//
+// Created by idk on 2023/1/7.
+//
+
+#ifndef PROGRAM_WATCHDOG_ARGUMENTSDECODE_H
+#define PROGRAM_WATCHDOG_ARGUMENTSDECODE_H
+
+
+class ArgumentsDecode {
+
+};
+
+
+#endif //PROGRAM_WATCHDOG_ARGUMENTSDECODE_H
