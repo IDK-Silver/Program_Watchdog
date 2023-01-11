@@ -1,8 +1,9 @@
 # 程式監控
 
-## 使用範圍
+## 使用範圍 & 下載網址
 
 - 當主程式沒有正常結束時，會關閉副程式
+- [下載網址](https://github.com/IDK-Silver/Program_Watchdog/releases/download/1.0/win_executable.zip)
 
 
 
