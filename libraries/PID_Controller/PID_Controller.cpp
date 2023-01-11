@@ -15,10 +15,14 @@ bool PID_Controller::Terminate() {
 }
 
 bool PID_Controller::IsProcess() {
-    this->h_process = OpenProcess(PROCESS_TERMINATE, FALSE, this->pid_value);
-    if (this->h_process == nullptr)
-        return false;
-    return true;
+    HANDLE process = OpenProcess(SYNCHRONIZE, FALSE, this->pid_value);
+    DWORD ret = WaitForSingleObject(process, 0);
+    CloseHandle(process);
+    return ret == WAIT_TIMEOUT;
+}
+
+PID_Controller::~PID_Controller() {
+    CloseHandle(h_process);
 }
 
 

@@ -9,11 +9,18 @@
 #include <windows.h>
 #include <processthreadsapi.h>
 #include <string>
+#include <vector>
+
+struct PID_Controller_Data {
+    std::string program_path;
+    int main_program_pid;
+    std::vector<int> watch_pids;
+};
 
 class PID_Controller {
 public:
     PID_Controller() = default;
-    ~PID_Controller() = default;
+    ~PID_Controller();
     void SetPID(int pid);
     bool Terminate();
     bool IsProcess();
