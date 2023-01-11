@@ -32,6 +32,7 @@ program_watchdog.exe -m 1 -w 10 11 12
 
 - Python 3
 - Visual Studio 2019 C++
+- CMake 3.0
 - Windows 10
 
 ### CMake 設定
