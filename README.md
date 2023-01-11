@@ -1,6 +1,31 @@
 # 程式監控
 
-## 編譯說明
+## 使用範圍
+
+- 當主程式沒有正常結束時，會關閉副程式
+
+
+
+## 使用說明
+
+- 使用格式
+  - -m 後面要監控的主程式PID (只能輸入一個)
+  - -w  要關閉的程式 (可以接受多個數入, 每個輸入以空白分開)
+
+```
+.\program_watchdog -m main_program_pid -w close_pid_1 colse_pid_2
+```
+
+- 使用範例
+  - 假設要監控的主程式PID : 1
+  - 要關閉的程式PID為 : 10 11 12
+```
+.\program_watchdog -m 1 -w 10 11 12
+```
+
+
+
+## 編譯＆ 測試說明 
 
 ### 環境
 
@@ -23,29 +48,10 @@
 把這兩個執行檔案放到專案目錄下的test資料夾內
 
 執行 test_script.py
+
 ```
 python.exe test_script.py
 ```
-
-
-## 使用說明
-
-- 使用格式
-  - -m 後面要監控的主程式PID (只能輸入一個)
-  - -w  要關閉的程式 (可以接受多個數入, 每個輸入以空白分開)
-
-```
-.\program_watchdog -m main_program_pid -w close_pid_1 colse_pid_2
-```
-
-- 使用範例
-  - 假設要監控的主程式PID : 1
-  - 要關閉的程式PID為 : 10 11 12
-```
-.\program_watchdog -m 1 -w 10 11 12
-```
-
-
 
 
 
