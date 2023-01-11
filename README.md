@@ -14,14 +14,14 @@
   - -w  要關閉的程式 (可以接受多個數入, 每個輸入以空白分開)
 
 ```
-program_watchdog -m main_program_pid -w close_pid_1 colse_pid_2
+program_watchdog.exe -m main_program_pid -w close_pid_1 colse_pid_2
 ```
 
 - 使用範例
   - 假設要監控的主程式PID : 1
   - 要關閉的程式PID為 : 10 11 12
 ```
-program_watchdog -m 1 -w 10 11 12
+program_watchdog.exe -m 1 -w 10 11 12
 ```
 
 
